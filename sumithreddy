@@ -1,0 +1,18 @@
+
+pipeline {
+agent any
+
+stages {
+    stages('compile') {
+        steps {
+            sh 'javac addition.java'
+      } 
+
+}
+    stages('run') {
+        steps {
+            sh 'java addition'
+        }
+    }
+  }
+}
